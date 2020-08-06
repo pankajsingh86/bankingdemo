@@ -1,0 +1,7 @@
+{
+  "xsappname": "bankingdemo",
+  "tenant-mode": "dedicated",
+  "scopes": [],
+  "attributes": [],
+  "role-templates": []
+}

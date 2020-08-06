@@ -1,0 +1,91 @@
+{
+	"VCAP_SERVICES": {
+		"destination": [
+			{
+				"label": "destination",
+				"provider": null,
+				"plan": "lite",
+				"name": "bankingdemo-destination",
+				"tags": [
+					"destination",
+					"conn",
+					"connsvc"
+				],
+				"instance_name": "bankingdemo-destination",
+				"binding_name": null,
+				"credentials": {
+					"uaadomain": "authentication.eu10.hana.ondemand.com",
+					"tenantmode": "dedicated",
+					"clientid": "sb-clone44b612ceb6b544ada9568de48378f80c!b51954|destination-xsappname!b404",
+					"instanceid": "44b612ce-b6b5-44ad-a956-8de48378f80c",
+					"verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvW2kPLoiI/moO05SDDYacU/fH4GXpiq4Wfi9mrrWi60YDqNJO4LipeyzLITayecxJy45p+funY5EBy7v6/iYXpbf/3YUmh88FMIAlH4CGnwNkJFcY40IJT+AE6s5WcgzmOr/QxWS9JIR6KYFHv0tXXawO33WIKLRwASnZChPtl3OZSzj3apsWPSm0cyzqjfw53KCHiDFI7AMaevKlKGYDgphwoA944m1Oj95WVkEezDBBA2syY7mbIZZHCRKia+Hnt+/bXXY7eOZHljc9CpmdQ48sbVk8lwYY/uapPlYo0GQlBLIuhvuKlJXR7KHAnt8/RzjDlx0TUk+ikm3t0p3DwIDAQAB-----END PUBLIC KEY-----",
+					"xsappname": "clone44b612ceb6b544ada9568de48378f80c!b51954|destination-xsappname!b404",
+					"identityzone": "a5215c99trial",
+					"clientsecret": "hmVmI10CXqKazrccIMOid8JQp50=",
+					"tenantid": "9e6114f8-19dd-4dc5-8a3c-85116972cbc5",
+					"uri": "https://destination-configuration.cfapps.eu10.hana.ondemand.com",
+					"url": "https://a5215c99trial.authentication.eu10.hana.ondemand.com"
+				},
+				"syslog_drain_url": null,
+				"volume_mounts": []
+			}
+		],
+		"xsuaa": [
+			{
+				"label": "xsuaa",
+				"provider": null,
+				"plan": "application",
+				"name": "bankingdemo",
+				"tags": [
+					"xsuaa"
+				],
+				"instance_name": "bankingdemo",
+				"binding_name": null,
+				"credentials": {
+					"tenantmode": "dedicated",
+					"sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+					"clientid": "sb-bankingdemo!t51954",
+					"xsappname": "bankingdemo!t51954",
+					"clientsecret": "v09A+jC3C1lH4S82F0bU3/RF3uo=",
+					"url": "https://a5215c99trial.authentication.eu10.hana.ondemand.com",
+					"uaadomain": "authentication.eu10.hana.ondemand.com",
+					"verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvW2kPLoiI/moO05SDDYacU/fH4GXpiq4Wfi9mrrWi60YDqNJO4LipeyzLITayecxJy45p+funY5EBy7v6/iYXpbf/3YUmh88FMIAlH4CGnwNkJFcY40IJT+AE6s5WcgzmOr/QxWS9JIR6KYFHv0tXXawO33WIKLRwASnZChPtl3OZSzj3apsWPSm0cyzqjfw53KCHiDFI7AMaevKlKGYDgphwoA944m1Oj95WVkEezDBBA2syY7mbIZZHCRKia+Hnt+/bXXY7eOZHljc9CpmdQ48sbVk8lwYY/uapPlYo0GQlBLIuhvuKlJXR7KHAnt8/RzjDlx0TUk+ikm3t0p3DwIDAQAB-----END PUBLIC KEY-----",
+					"apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+					"identityzone": "a5215c99trial",
+					"identityzoneid": "9e6114f8-19dd-4dc5-8a3c-85116972cbc5",
+					"tenantid": "9e6114f8-19dd-4dc5-8a3c-85116972cbc5"
+				},
+				"syslog_drain_url": null,
+				"volume_mounts": []
+			}
+		]
+	}
+,
+
+	"VCAP_APPLICATION": {
+		"cf_api": "https://api.cf.eu10.hana.ondemand.com",
+		"limits": {
+			"fds": 16384,
+			"mem": 3072,
+			"disk": 3072
+		},
+		"application_name": "bankingdemo-srv",
+		"application_uris": [
+			"a5215c99trial-dev-bankingdemo-srv.cfapps.eu10.hana.ondemand.com"
+		],
+		"name": "bankingdemo-srv",
+		"space_name": "dev",
+		"space_id": "83f198f7-a3ff-4872-8b20-8f4c6cc98f89",
+		"organization_id": "17f6ed7e-20c0-4f03-bfa8-efcc8f78022d",
+		"organization_name": "a5215c99trial",
+		"uris": [
+			"a5215c99trial-dev-bankingdemo-srv.cfapps.eu10.hana.ondemand.com"
+		],
+		"users": null,
+		"process_id": "94562694-1a46-40b9-9a1a-94516a2a2bab",
+		"process_type": "web",
+		"application_id": "94562694-1a46-40b9-9a1a-94516a2a2bab",
+		"version": "f66ebe67-8bec-400c-b3f7-6e05dd14cb0c",
+		"application_version": "f66ebe67-8bec-400c-b3f7-6e05dd14cb0c"
+	}
+}

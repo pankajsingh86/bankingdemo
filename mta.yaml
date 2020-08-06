@@ -1,0 +1,46 @@
+## Generated mta.yaml based on template version 0.2.0
+## appName = bankingdemo
+## language=nodejs; multiTenant=false
+## approuter=
+_schema-version: '3.1'
+ID: bankingdemo
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+  
+  
+build-parameters:
+  before-all:
+   - builder: custom
+     commands:
+      - npm install
+      - npx cds build
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: bankingdemo-srv
+ # ------------------------------------------------------------
+   type: nodejs
+   path: gen/srv
+   properties:
+     EXIT: 1  # required by deploy.js task to terminate 
+
+   requires:
+     - name: bankingdemo-destination
+     - name: bankingdemo
+
+
+resources:
+ - name: bankingdemo-destination
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: bankingdemo-destination
+
+ - name: bankingdemo
+   type: org.cloudfoundry.managed-service
+   parameters:
+     path: ./xs-security.json
+     service: xsuaa
+     service-plan: application
+
