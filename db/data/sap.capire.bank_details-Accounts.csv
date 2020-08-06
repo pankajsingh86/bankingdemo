@@ -1,0 +1,4 @@
+﻿accountid;balance;customers.custID;account_type;account_status
+
+1000000000000001;5000;201;"Savings";"Active"
+1000000000000003;78000;203;"Current";"Active"

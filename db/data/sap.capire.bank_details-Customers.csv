@@ -1,0 +1,4 @@
+custID;firstname;lastname;age;dateOfBirth;bank.bankID;address;state.ID;city.ID
+201;"David";"Jatin";25;1996-05-02;101;"W3,kulalar Street, markaiyankottai";401;503
+203;"Kavya";"Kaur";10;2006-03-24;103;"Kuppaiah Street";401;501
+202;"Vani";"Ka";10;2006-03-24;102;"Kuppaiah Street";401;501
